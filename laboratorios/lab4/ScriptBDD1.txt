@@ -1,0 +1,20 @@
+CREATE DATABASE LINK test3
+CONNECT TO lrecalde IDENTIFIED BY lrecalde
+USING
+'(DESCRIPTION=
+   (ADDRESS_LIST=
+      (ADDRESS=(PROTOCOL=TCP)(HOST=192.168.23.130)(PORT=1521))
+   )
+   (CONNECT_DATA= 
+      (SERVICE_NAME=bancodb)
+   )
+)';
+
+
+create table profesor (prof_id number, nombre varchar(20), apellido varchar(20));
+
+insert into profesor values(100, 'angel', 'ramirez');
+
+insert into profesor values(200, 'marisol', 'alvarez');
+
+ select * from profesor;
